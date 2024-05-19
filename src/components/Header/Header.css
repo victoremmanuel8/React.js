@@ -8,37 +8,48 @@
 .original {
     background-color: rgb(255, 255, 255);
     border-radius: 10vh;
-    height: 50px;
+    height: 7%;
+    width: 96%;
     padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 01s ease, transform 01s ease;
-    transition: background-color 01s ease, transform 01s ease, width 0.8s ease-in-out, height 0.8s ease-in-out;
+    transition: background-color 01s ease, transform 01s ease, width 1s ease-in-out, height 3s ease-in-out;
     overflow: hidden;
-    width: 100%;
+    padding-left: 45px;
+    padding-right: 15px;
+}
+
+.original .li-alterada {
+    display: none;
 }
 
 .original svg {
-    transition: 1s ease-in-out;
     cursor: pointer;
 }
 
 .alterada {
     background-color: rgb(255, 255, 255);
-    border-radius: 10vh;
+    border-radius: 5vh;
     height: 85%;
-    width: 35%;
-    padding: 5px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
     overflow: hidden;
-    padding: 20px;
-    padding-top: 40px;
-    transition: background-color 01s ease, transform 01s ease, width 1s ease-in-out, height 0.8s ease-in-out;
+    padding: 15px;
+    padding-top: 20px;
+    transition: background-color 01s ease, transform 01s ease, width .6s ease, height 2s ease;
     position: fixed;
+}
+
+.alterada .header {
+    background-color: #12121222;
+}
+
+.alterada .li-alterada {
+    display: block;
 }
 
 .alterada ul {
@@ -50,14 +61,43 @@
     display: none;
 }
 
+.alterada .perfil img{
+    animation: perfil 1.1s;
+    animation-fill-mode: forwards;
+    border-radius: 100%;
+}
+
 .alterada ul {
-    font-size: 1.4em;
+    animation: ul 1.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes perfil {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+
+    100% {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+@keyframes ul {
+    0% {
+        font-size: 0.0em;
+    }
+
+    100% {
+        font-size: 1.4em;
+    }
 }
 
 ul {
     display: flex;
     flex-direction: row;
-    transition: 1s ease-in-out;
+    transition: 1.5s ease-in-out;
     list-style: none;
     gap: 40px;
 }
@@ -71,11 +111,9 @@ ul li {
     align-items: center;
     border: solid 1px #121212;
     border-radius: 100px;
-    transition: 1s ease-in-out;
     width: 40%;
     height: 85%;
     overflow: hidden;
-    height: 40px;
 }
 
 .pesquisa svg {

@@ -1,7 +1,6 @@
 import './Header.css';
-import PERFIL from './PERFIL.jpg'
+import PERFIL from '../img/PERFIL.jpg'
 import React, { useState, useEffect, useRef } from 'react';
-import './Menu.js'
 
 function Header() {
     const [alterada, setAlterada] = useState(false);
@@ -32,14 +31,16 @@ function Header() {
     return (
     <div className='header'>
         <div className={alterada ? 'original alterada' : 'original'} ref={divRef} >
-        <svg onClick={handleSvgClick} ref={svgRef}  xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+        {/* <svg onClick={handleSvgClick} ref={svgRef} xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
         <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
-        </svg>
+        </svg> */}
         <ul>
             <li>Home</li>
             <li>Curriculos</li>
             <li>Projetos</li>
             <li>Contatos</li>
+            <li className='li-alterada'>Contatos1</li>
+            <li className='li-alterada'>Contatos1</li>
         </ul>
         <div className='pesquisa'>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-search" viewBox="0 0 16 16">

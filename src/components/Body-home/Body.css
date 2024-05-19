@@ -1,0 +1,52 @@
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.sobre p{
+    font-family: 'Times New Roman', Times, serif;
+    color: #fafafa;
+    width: 35%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.sobre .img-sobre img{
+    border-radius: 100vh 100vh 5vh 5vh;
+}
+
+.sobre p {
+    position: relative;
+}
+
+.sobre p .p-left {
+    position: absolute;
+    top: -40px;
+    left: -60px;
+}
+
+.sobre p .p-right {
+    position: absolute;
+    bottom: -40px;
+    right: -60px;
+    transform: scale(-1);
+}
+
+.sobre .img-sobre {
+    position: relative;
+}
+
+.sobre .img-sobre .lampada {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+}
